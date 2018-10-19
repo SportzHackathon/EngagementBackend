@@ -1,0 +1,40 @@
+{
+  "name": "EngagementBackend",
+  "version": "1.0.0",
+  "description": "Description",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run build && mocha dist/**/*.test.js",
+    "build": "rimraf ./dist && babel src/ test/ -d dist --copy-files",
+    "start": "babel-watch --watch src src/main.js",
+    "flow": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SportzHackathon/EngagementBackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SportzHackathon/EngagementBackend/issues"
+  },
+  "homepage": "https://github.com/SportzHackathon/EngagementBackend#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "rimraf": "^2.6.2",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.83.0",
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0",
+    "babel-watch": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "firebase-admin": "^6.0.0"
+  }
+}
